@@ -199,7 +199,7 @@ const AllVolunteers = () => {
           transition={{ delay: 0.3 }}
         >
           <div className="flex items-center justify-center mb-8">
-            <div className="flex w-full max-w-2xl overflow-hidden rounded-full shadow-md dark:shadow-gray-900/50">
+            <div className="flex w-full max-w-2xl overflow-hidden rounded-full">
               <div className="flex items-center pl-4 bg-white dark:bg-gray-700">
                 <FaSearch className="w-5 h-5 text-gray-400 dark:text-gray-500" />
               </div>

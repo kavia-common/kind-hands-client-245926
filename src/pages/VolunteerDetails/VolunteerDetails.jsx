@@ -187,7 +187,7 @@ const VolunteerDetails = () => {
           >
             <div className="space-y-4 lg:sticky lg:top-4">
               {/* Main Image */}
-              <div className="relative rounded-xl overflow-hidden shadow-lg aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+              <div className="relative rounded-xl overflow-hidden aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeImage}

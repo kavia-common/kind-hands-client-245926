@@ -88,7 +88,7 @@ const Navbar = () => {
     /iPad|Macintosh/i.test(navigator.userAgent) && "ontouchend" in document;
   const shouldShowMobileMenu = windowSize.width < 1024 || isIPad;
 
-  const isProfileActive = useIsActivePath(["/add-volunteer", "/my-posts"]);
+  // const isProfileActive = useIsActivePath(["/add-volunteer", "/my-posts"]);
 
   return (
     <header className="sticky top-0 z-50">
@@ -207,7 +207,7 @@ const Navbar = () => {
             )}
 
             <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
-              <ThemeToggle className="hidden xs:block" />
+              {/* <ThemeToggle className="hidden xs:block" /> */}
 
               <div className="hidden sm:block">
                 <SearchBar />

@@ -29,6 +29,7 @@ import { format, parseISO } from "date-fns";
 import { toast } from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import { allVolunteersPromise } from "../../services/api/volunteersApi";
+import axios from "axios";
 
 const COLORS = ["#6bd3f3", "#02476e", "#3aa8e0", "#0171a4", "#8bddf7"];
 
@@ -42,12 +43,6 @@ const DashboardHome = () => {
   const [totalPosts, setTotalPosts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-
-  // Toggle dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
-  };
 
   const fetchDashboardData = async () => {
     try {
@@ -197,50 +192,7 @@ const DashboardHome = () => {
             Welcome back, {user?.email?.split("@")[0]}
           </p>
         </div>
-        
-        <div className="flex items-center space-x-4 w-full md:w-auto">
-          <div className="relative flex-1 md:w-64">
-            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
-            <input
-              type="text"
-              placeholder="Search activities..."
-              className="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#6bd3f3] focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-          
-          <button 
-            onClick={toggleDarkMode}
-            className="p-2 rounded-lg bg-white dark:bg-gray-800 shadow-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
-          >
-            {darkMode ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
-          </button>
-          
-          <button 
-            className="p-2 rounded-lg bg-white dark:bg-gray-800 shadow-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
-            onClick={fetchDashboardData}
-          >
-            <FiRefreshCw className="text-lg" />
-          </button>
-          
-          <div className="relative">
-            <button className="p-2 rounded-lg bg-white dark:bg-gray-800 shadow-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
-              <FaRegBell className="text-lg" />
-            </button>
-            <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
-          </div>
-          
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-[#02476e] dark:bg-[#6bd3f3] flex items-center justify-center text-white font-medium">
-              {user?.email?.charAt(0).toUpperCase()}
-            </div>
-            <span className="font-medium text-gray-700 dark:text-gray-300 hidden md:inline">
-              {user?.email}
-            </span>
-            <FiChevronDown className="text-gray-500 dark:text-gray-400 hidden md:block" />
-          </div>
-        </div>
+       
       </div>
 
       {/* Tabs */}

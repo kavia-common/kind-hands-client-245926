@@ -97,8 +97,7 @@ const VolunteerNowSection = () => {
                 {volunteerPosts.map((post, index) => (
                   <motion.div
                     key={post._id}
-                    className="flex flex-col bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-900/50 overflow-hidden hover:shadow-xl dark:hover:shadow-gray-900 transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full group"
-                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full group"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -113,7 +112,7 @@ const VolunteerNowSection = () => {
                       <img
                         src={post.thumbnail || "/fallback.jpg"}
                         alt={post.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-102"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

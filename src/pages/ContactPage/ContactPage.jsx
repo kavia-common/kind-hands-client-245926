@@ -107,12 +107,11 @@ const ContactPage = () => {
                 {contactMethods.map((method) => (
                   <motion.div
                     key={method.id}
-                    whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <button
                       onClick={() => setActiveMethod(method.id)}
-                      className={`w-full text-left p-6 rounded-lg transition-all ${activeMethod === method.id ? 'bg-white shadow-md border border-[#024870]/10' : 'hover:bg-white/50'}`}
+                      className={`w-full text-left p-6 rounded-lg transition-all ${activeMethod === method.id ? 'bg-white shadow-sm border border-[#024870]/10' : 'hover:bg-white/50'}`}
                     >
                       <div className="flex items-start">
                         <div className={`p-3 rounded-full ${method.color} bg-opacity-10 mr-4`}>

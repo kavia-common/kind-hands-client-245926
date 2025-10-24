@@ -61,7 +61,7 @@ const BenefitCard = () => {
           >
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-transparent via-[#18c9ff] to-transparent dark:via-[#6bd3f3] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-0.5" />
 
-            <div className="relative z-10 h-full p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 group-hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div className="relative z-10 h-full p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 group-hover:shadow-sm transition-all duration-300 overflow-hidden">
               <motion.div
                 className="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-[#23ccff1f] dark:bg-[#6bd3f310]"
                 initial={{ scale: 0.8, opacity: 0 }}

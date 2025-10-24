@@ -247,7 +247,7 @@ const AddVolunteer = () => {
         className="max-w-5xl"
       >
         {/* Floating Card Container */}
-        <div className=" dark:bg-gray-800 rounded-3xl overflow-hidden border border-white/20 dark:border-gray-700/50">
+        <div className=" dark:bg-gray-800 rounded-3xl overflow-hidden border border-white/20 dark:border-gray-700/50  bg-white">
           {/* Gradient Header */}
           <div className="relative text-[#024870]  p-6">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#6bd3f3] rounded-full filter blur-[80px] opacity-30"></div>
