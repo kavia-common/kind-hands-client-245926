@@ -20,7 +20,7 @@ export default defineConfig({
      * - Regex entries match host patterns (recommended here due to dynamic hostnames)
      */
     allowedHosts: [
-      /^(?:.*\.)?(?:qa01|qa\.qa01)\.cloud\.kavia\.ai$/,
+      /^(?:.*\.)?(?:qa01|qa\.qa01|qa\.qa01)\.cloud\.kavia\.ai$/,
       // Common local dev hosts
       'localhost',
       '127.0.0.1',
@@ -31,7 +31,7 @@ export default defineConfig({
      * Apply the same host allow-list to `vite preview` as well.
      */
     allowedHosts: [
-      /^(?:.*\.)?(?:qa01|qa\.qa01)\.cloud\.kavia\.ai$/,
+      /^(?:.*\.)?(?:qa01|qa\.qa01|qa\.qa01)\.cloud\.kavia\.ai$/,
       'localhost',
       '127.0.0.1',
     ],
